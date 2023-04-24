@@ -1,0 +1,16 @@
+D:\ASP.net\Assignment_01\bin\Debug\net5.0\Assignment_01.exe
+D:\ASP.net\Assignment_01\bin\Debug\net5.0\Assignment_01.deps.json
+D:\ASP.net\Assignment_01\bin\Debug\net5.0\Assignment_01.runtimeconfig.json
+D:\ASP.net\Assignment_01\bin\Debug\net5.0\Assignment_01.runtimeconfig.dev.json
+D:\ASP.net\Assignment_01\bin\Debug\net5.0\Assignment_01.dll
+D:\ASP.net\Assignment_01\bin\Debug\net5.0\ref\Assignment_01.dll
+D:\ASP.net\Assignment_01\bin\Debug\net5.0\Assignment_01.pdb
+D:\ASP.net\Assignment_01\obj\Debug\net5.0\Assignment_01.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.net\Assignment_01\obj\Debug\net5.0\Assignment_01.AssemblyInfoInputs.cache
+D:\ASP.net\Assignment_01\obj\Debug\net5.0\Assignment_01.AssemblyInfo.cs
+D:\ASP.net\Assignment_01\obj\Debug\net5.0\Assignment_01.csproj.CoreCompileInputs.cache
+D:\ASP.net\Assignment_01\obj\Debug\net5.0\Assignment_01.dll
+D:\ASP.net\Assignment_01\obj\Debug\net5.0\ref\Assignment_01.dll
+D:\ASP.net\Assignment_01\obj\Debug\net5.0\Assignment_01.pdb
+D:\ASP.net\Assignment_01\obj\Debug\net5.0\Assignment_01.genruntimeconfig.cache
+D:\ASP.net\Assignment_01\obj\Debug\net5.0\Assignment_01.csproj.AssemblyReference.cache
