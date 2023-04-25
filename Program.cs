@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Aspose.Cells;
+using System;
+using System.IO;
 
 namespace Assignment_01
 {
@@ -6,7 +8,7 @@ namespace Assignment_01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("******1. University Grading System******");
+            /*Console.WriteLine("******1. University Grading System******");
             UniversityGradingSystem();
             Console.WriteLine();
 
@@ -30,11 +32,75 @@ namespace Assignment_01
             Console.WriteLine("******4. Pattern Program******");
             Patterns starPattern = new Patterns();
             starPattern.StarPattern();
-            Console.WriteLine();
+            Console.WriteLine();*/
 
             Console.WriteLine("******5. Find Max Number in an array******");
             MaxNumber maxNumber = new MaxNumber();
-            maxNumber.FindMaxNumber();
+            //maxNumber.FindMaxNumber();
+            //maxNumber.FindMaxNumberByOneLoop();
+
+            Console.WriteLine("When it traverse through 10K elements array");
+            int calculatedTimeForOneLoop10K = maxNumber.CalculateTimeForOneForLoop(10000);//0
+            int calculatedTimeForTwoLoop10K = maxNumber.CalculateTimeForTwoForLoops(10000);//307
+
+            Console.WriteLine("When it traverse through 20K elements array");
+            int calculatedTimeForOneLoop20K = maxNumber.CalculateTimeForOneForLoop(20000);//0
+            int calculatedTimeForTwoLoop20K = maxNumber.CalculateTimeForTwoForLoops(20000);//1344
+
+            Console.WriteLine("When it traverse through 30K elements array");
+            int calculatedTimeForOneLoop30K = maxNumber.CalculateTimeForOneForLoop(30000);//0
+            int calculatedTimeForTwoLoop30K = maxNumber.CalculateTimeForTwoForLoops(30000);//2719
+
+            Console.WriteLine("When it traverse through 40K elements array");
+            int calculatedTimeForOneLoop40K = maxNumber.CalculateTimeForOneForLoop(40000);//0
+            int calculatedTimeForTwoLoop40K = maxNumber.CalculateTimeForTwoForLoops(40000);//5097
+
+            Console.WriteLine("When it traverse through 50K elements array");
+            int calculatedTimeForOneLoop50K = maxNumber.CalculateTimeForOneForLoop(50000);//0
+            int calculatedTimeForTwoLoop50K = maxNumber.CalculateTimeForTwoForLoops(50000);//8239
+
+            // Instantiate a Workbook object
+            Workbook workbook = new Workbook();
+
+            // Obtain the reference of the first worksheet
+            Worksheet worksheet = workbook.Worksheets[0];
+
+            // Add sample values to cells
+            worksheet.Cells["A2"].PutValue("10K Random Numbers");
+            worksheet.Cells["A3"].PutValue("20K Random Numbers");
+            worksheet.Cells["A4"].PutValue("30K Random Numbers");
+            worksheet.Cells["A5"].PutValue("40K Random Numbers");
+            worksheet.Cells["A6"].PutValue("50K Random Numbers");
+
+            worksheet.Cells["B1"].PutValue("Single For-Loop Version");
+            worksheet.Cells["B2"].PutValue(calculatedTimeForOneLoop10K);
+            worksheet.Cells["B3"].PutValue(calculatedTimeForOneLoop20K);
+            worksheet.Cells["B4"].PutValue(calculatedTimeForOneLoop30K);
+            worksheet.Cells["B5"].PutValue(calculatedTimeForOneLoop40K);
+            worksheet.Cells["B6"].PutValue(calculatedTimeForOneLoop50K);
+
+            worksheet.Cells["C1"].PutValue("Dual For-Loop Version");
+            worksheet.Cells["C2"].PutValue(calculatedTimeForTwoLoop10K);
+            worksheet.Cells["C3"].PutValue(calculatedTimeForTwoLoop20K);
+            worksheet.Cells["C4"].PutValue(calculatedTimeForTwoLoop30K);
+            worksheet.Cells["C5"].PutValue(calculatedTimeForTwoLoop40K);
+            worksheet.Cells["C6"].PutValue(calculatedTimeForTwoLoop50K);
+
+            // Add a chart to the worksheet
+            int chartIndex = worksheet.Charts.Add(Aspose.Cells.Charts.ChartType.Column, 7, 0, 30, 10);
+
+            // Access the instance of the newly added chart
+            Aspose.Cells.Charts.Chart chart = worksheet.Charts[chartIndex];
+
+            // Set chart data source as the range  "A1:C6"
+            chart.SetChartDataRange("A1:C6", true);
+
+            // Save the Excel file
+            if (File.Exists(@"D:\ASP.net\Assignment_01\Column-Chart.xls"))
+            {
+                File.Delete(@"D:\ASP.net\Assignment_01\Column-Chart.xls");
+            }else
+            workbook.Save(@"D:\ASP.net\Assignment_01\Column-Chart.xls");
 
 
         }
@@ -116,8 +182,8 @@ namespace Assignment_01
             int weight = Convert.ToInt32(Console.ReadLine());
 
             //Calculate the BMI value
-            double heightInMeters = height / 100; 
-            double bmi = weight / Math.Pow(heightInMeters, 2); 
+            double heightInMeters = height / 100;
+            double bmi = weight / Math.Pow(heightInMeters, 2);
             Console.WriteLine($"Your BMI value is {bmi:F2} ");
 
 
@@ -125,8 +191,8 @@ namespace Assignment_01
             {
                 if (gender.ToUpper() == "M")
                 {
-                   /* Console.WriteLine("https://www.researchgate.net/figure/BMI-Body-Mass-Index-cut-points-by-age-for-teenage-boys-and-girls_tbl3_308749102");
-                    Console.WriteLine("You are male");*/
+                    /* Console.WriteLine("https://www.researchgate.net/figure/BMI-Body-Mass-Index-cut-points-by-age-for-teenage-boys-and-girls_tbl3_308749102");
+                     Console.WriteLine("You are male");*/
                 }
                 else
                 {
