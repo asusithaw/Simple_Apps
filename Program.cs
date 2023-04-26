@@ -32,14 +32,20 @@ namespace Assignment_01
             Console.WriteLine("******4. Pattern Program******");
             Patterns starPattern = new Patterns();
             starPattern.StarPattern();
-            Console.WriteLine();*/
+            Console.WriteLine();
 
             Console.WriteLine("******5. Find Max Number in an array******");
             MaxNumber maxNumber = new MaxNumber();
-            //maxNumber.FindMaxNumber();
-            //maxNumber.FindMaxNumberByOneLoop();
+            maxNumber.FindMaxNumber();
+            maxNumber.FindMaxNumberByOneLoop();*/
 
-            Console.WriteLine("When it traverse through 10K elements array");
+            Console.WriteLine("******6. Lottery Draw******");
+            LotteryTicket lotteryTicket = new LotteryTicket();
+            lotteryTicket.AmountOfLotteryTicketWinning();
+
+            
+
+            /*Console.WriteLine("When it traverse through 10K elements array");
             int calculatedTimeForOneLoop10K = maxNumber.CalculateTimeForOneForLoop(10000);//0
             int calculatedTimeForTwoLoop10K = maxNumber.CalculateTimeForTwoForLoops(10000);//307
 
@@ -100,7 +106,7 @@ namespace Assignment_01
             {
                 File.Delete(@"D:\ASP.net\Assignment_01\Column-Chart.xls");
             }else
-            workbook.Save(@"D:\ASP.net\Assignment_01\Column-Chart.xls");
+            workbook.Save(@"D:\ASP.net\Assignment_01\Column-Chart.xls");*/
 
 
         }
