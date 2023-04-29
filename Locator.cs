@@ -18,14 +18,13 @@ namespace Assignment_01
             Console.WriteLine("Enter your Y coordinates as a number");
             int y = Convert.ToInt32(Console.ReadLine());
 
-
             Console.WriteLine("Please adhere to the following instructions; " + "\n" +
-                "Press \"L\" to move Left" + "\n" +
-                "Press \"R\" to move Right" + "\n" +
-                "Press \"U\" to move Up" + "\n" +
-                "Press \"D\" to move Down" + "\n" +
-                "Press Anything to get rid of the program" + "\n"
-                );
+            "Press \"L\" to move Left" + "\n" +
+            "Press \"R\" to move Right" + "\n" +
+            "Press \"U\" to move Up" + "\n" +
+            "Press \"D\" to move Down" + "\n" +
+            "Press Anything to get rid of the program" + "\n"
+            );
 
             string instruction = Console.ReadLine().ToUpper();
 

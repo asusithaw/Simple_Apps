@@ -19,7 +19,7 @@ namespace Assignment_01
             string winningNumbersWithLetterSpaceRemoveStr = winningNumbersWithLetter.Replace(" ", "").ToLower();
             string ticketNumberWithLetterSpaceRemoveStr = ticketNumberWithLetter.Replace(" ", "").ToLower();
 
-            if (winningNumbersWithLetterSpaceRemoveStr.Length == 7 || ticketNumberWithLetterSpaceRemoveStr.Length == 7)
+            if (winningNumbersWithLetterSpaceRemoveStr.Length == 7 && ticketNumberWithLetterSpaceRemoveStr.Length == 7)
             {
 
                 //Letter and 6 Numbers Correct
@@ -113,7 +113,7 @@ namespace Assignment_01
             return ($"You have won: Rs. {amount}");
         }
 
-
+       
 
     }
 }

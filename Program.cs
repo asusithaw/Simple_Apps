@@ -27,23 +27,29 @@ namespace Assignment_01
 
             Console.WriteLine("******3.b Locator through file input******");
             locator.LocateByFile();
-            Console.WriteLine();
+            Console.WriteLine();*/
 
             Console.WriteLine("******4. Pattern Program******");
             Patterns starPattern = new Patterns();
-            starPattern.StarPattern();
-            Console.WriteLine();
+            /*starPattern.StarPatternBackSlash();
+            Console.WriteLine();*/
+            //starPattern.StarPatternForwardSlash();
+            //starPattern.StarPatternX();
+            starPattern.StarPatternXBy2DArray();
+            //starPattern.StarPatternTriangle();
 
-            Console.WriteLine("******5. Find Max Number in an array******");
+            /*Console.WriteLine("******5. Find Max Number in an array******");
             MaxNumber maxNumber = new MaxNumber();
             maxNumber.FindMaxNumber();
             maxNumber.FindMaxNumberByOneLoop();*/
 
-            Console.WriteLine("******6. Lottery Draw******");
+            /*Console.WriteLine("******6. Lottery Draw******");
             LotteryTicket lotteryTicket = new LotteryTicket();
-            lotteryTicket.AmountOfLotteryTicketWinning();
+            lotteryTicket.AmountOfLotteryTicketWinning();*/
 
-            
+            /*Console.WriteLine("******6 a. Lottery Draw******");
+            LotteryTicketShanidaWasanawa lotteryTicketShanidaWasanawa = new LotteryTicketShanidaWasanawa();
+            lotteryTicketShanidaWasanawa.AmountOfLotteryTicketWinning();*/
 
             /*Console.WriteLine("When it traverse through 10K elements array");
             int calculatedTimeForOneLoop10K = maxNumber.CalculateTimeForOneForLoop(10000);//0
