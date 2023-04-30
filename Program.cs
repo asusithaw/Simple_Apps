@@ -35,7 +35,8 @@ namespace Assignment_01
             Console.WriteLine();*/
             //starPattern.StarPatternForwardSlash();
             //starPattern.StarPatternX();
-            starPattern.StarPatternXBy2DArray();
+            //starPattern.StarPatternXBy2DArray();
+            starPattern.MergeAllPatterns();
             //starPattern.StarPatternTriangle();
 
             /*Console.WriteLine("******5. Find Max Number in an array******");

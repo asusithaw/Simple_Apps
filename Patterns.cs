@@ -10,7 +10,7 @@ namespace Assignment_01
     {
         public void StarPatternBackSlash()
         {
-            Console.Write("Enter the number of rows you want:");
+            Console.Write("Enter Size: ");
             int x = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 0; i < x; i++)
@@ -27,7 +27,7 @@ namespace Assignment_01
 
         public void StarPatternForwardSlash()
         {
-            Console.Write("Enter the number of rows you want:");
+            Console.Write("Enter Size: ");
             int x = Convert.ToInt32(Console.ReadLine());
 
             for (int i = x; i > 0; i--)
@@ -42,87 +42,11 @@ namespace Assignment_01
             }
         }
 
-        public void StarPatternX()
-        {
-            /*Console.Write("Enter the number of rows you want:");
-            int x = Convert.ToInt32(Console.ReadLine());*/
-
-            for (int i = 1; i < 6; i++)
-            {
-                if (i < 3)
-                {
-                    for (int j = 1; j <= i; j++)
-                    {
-                        Console.Write(" ");
-
-                    }
-                    Console.Write("*");
-                }
-                else
-                {
-                    for (int j = 6 - i; j >= 1; j--)
-                    {
-                        Console.Write(" ");
-
-                    }
-
-                    Console.Write("*");
-                }
-
-
-                if (i < 3)
-                {
-                    for (int j = 6 - (2 * i); j >= 1; j--)
-                    {
-                        Console.Write(" ");
-
-                    }
-
-                    Console.Write("*");
-                }
-                else
-                {
-                    for (int j = 1; j <= i - 3; j++)
-                    {
-                        Console.Write(" ");
-
-                    }
-                    Console.Write("*");
-
-                }
-
-                Console.WriteLine();
-            }
-
-
-
-            /*
-                        for (int i = 1; i < 13; i++)
-                        {
-                            for (int j = 1; j <= i; j++)
-                            {
-                                Console.Write(" ");
-
-                            }
-                            Console.Write("*");
-
-                            for (int j = 13 - (2 * i + 1); j >= 1; j--)
-                            {
-                                Console.Write(" ");
-
-                            }
-                            Console.Write("*");
-                            Console.WriteLine();
-                        }
-            */
-
-
-
-        }
+        
 
         public void StarPatternXBy2DArray()
         {
-            Console.Write("Enter the number of rows you want:");
+            Console.Write("Enter Size: ");
             int x = Convert.ToInt32(Console.ReadLine());
 
             char[,] starPatternXArray = new char[x, x];
@@ -147,11 +71,11 @@ namespace Assignment_01
                         starPatternXArray[i, j] = '*';
                     }
                 }
-            }            
+            }
 
             //ForwardSlash
             int k = 0;
-            int m = x-1;
+            int m = x - 1;
             while (m >= 0)
             {
                 starPatternXArray[k, m] = '*';
@@ -174,7 +98,7 @@ namespace Assignment_01
 
         public void StarPatternTriangle()
         {
-            Console.Write("Enter the number of rows you want:");
+            Console.Write("Enter Size: ");
             int x = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 0; i < x; i++)
@@ -197,6 +121,61 @@ namespace Assignment_01
                 Console.WriteLine();
             }
 
+
+        }
+
+        public void MergeAllPatterns()
+        {
+            bool exitProgram = true;
+            while (exitProgram)
+            {              
+                Console.WriteLine(
+                "Menu" + "\n" +
+                "1 - /" + "\n" +
+                "2 - \\" + "\n" +
+                "3 - X" + "\n" +
+                "4 - Xmas tree" + "\n" +
+                "O - Exit"
+                );
+
+                Console.Write("What do you want to print? ");
+                string input = Console.ReadLine();
+
+                if (input == "1" || input == "2" || input == "3" || input == "4")
+                {                    
+
+                    switch (input)
+                    {
+                        case "1":
+                            StarPatternBackSlash();
+                            break;
+
+                        case "2":
+                            StarPatternForwardSlash();
+                            break;
+
+                        case "3":
+                            StarPatternXBy2DArray();
+                            break;
+
+                        case "4":
+                            StarPatternTriangle();
+                            break;
+                            
+                    }
+
+                }
+                else if (input == "0")
+                {
+                    Console.WriteLine("Exited From The Program");
+                    exitProgram = false;
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid input: {input}");
+                }
+
+            }
 
         }
     }
